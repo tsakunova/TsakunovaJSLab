@@ -1,0 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  max-width: 800px;
+  background-color: antiquewhite;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
