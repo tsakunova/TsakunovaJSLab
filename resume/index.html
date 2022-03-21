@@ -6,61 +6,137 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV Tatsiana Tsakunova</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+
 </head>
 
 <body>
   <main>
     <aside>
-      <section>
-        <picture>
-          <source srcset="mdn-logo-wide.png" media="(max-width: 600px)">
-          <img src="mdn-logo-narrow.png" alt="cv photo">
-        </picture>
-        <h1>Tatsiana Tsakunova</h1>
+      <section class="aside_name-block">
+        <div class="name-block_photo">
+          <picture>
+            <source srcset="assets/photo-320px.jpg" media="(max-width: 840px)">
+            <img src="assets/photo-480px.jpg" alt="cv photo">
+          </picture>
+        </div>
+        <h1>Tatsiana <span>Tsakunova</span></h1>
         <p>front-end developer</p>
       </section>
-      <section>
-        <h2>Contact</h2>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </section>
-      <section>
-        <h2>Follow me</h2>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+      <section class="aside_info-block">
+        <article class="info-block_contact">
+          <h2 class="info-block_section-name">Contact</h2>
+          <ul>
+            <li><a href="tel:+37529749693"><span class="material-icons-outlined material-icons">
+              call
+              </span> +37529749693</a></li>
+            <li><a href="mailto:tv.tsakunova@gmail.com"><span class="material-icons-outlined material-icons">
+              email
+              </span> tv.tsakunova@gmail.com</a></li>
+            <li><a href="https://github.com/tsakunova" target="blank"><span class="material-icons-outlined material-icons">
+              link
+              </span> GitHub</a></li>
+            <li><a href="skype:live:.cid.e84dd81a1bc7530?chat"><span class="material-icons-outlined material-icons">
+              message
+              </span> Skype</a></li>
+          </ul>
+        </article>
+        <article class="info-block_skills">
+          <h2 class="info-block_section-name">Skills</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Figma</li>
+            <li>Git</li>
+          </ul>
+        </article>
       </section>
 
     </aside>
-    <section>
-      <section>
-        <h2>About me</h2>
-        <p></p>
-      </section>
-      <section>
-        <h2>Education</h2>
+    <section class="full-info">
+      <article class="full-info_about">
+        <header>
+          <span class="material-icons-outlined material-icons">
+          account_circle
+          </span>
+          <h2>About me</h2>
+        </header>
+        <p>My goal is to start a career junior front-end developer and develop in this area. I am currently working as a
+          teacher. I took the first step towards my goal - I quit public school and work as a Scratch and HTML + CSS
+          trainer for children in an online school, while I actively study programming languages. I have good analytical
+          skills. Easy to learn. I work well in a team.</p>
+      </article>
+      <article>
+        <header>
+          <span class="material-icons-outlined  material-icons">
+          school
+          </span>
+          <h2>Education</h2>
+        </header>
+        
+        <ul>
+          <li>
+            <span>March 2022 - Till Now</span> - Epam Systems University
+            Front-End Lab
+        </li>
+          <li>
+            <span>October 2021 - January 2022</span> - Epam Systems Front-End
+            Outside Training
+        </li>
+          <li>
+            <span class="date">2021-Till Now</span>
+            <a href="https://rs.school/" target="_blank">
+              <span>RS School JS/FRONT-END courses:</span>
+            </a>
+          </li>
+          <li>
+            <span class="date">2019 - 2020</span>
+            <a href="https://itclass.by/" target="_blank">
+              <span>IT-Class courses</span>
+            </a>
+          </li>
+          <li>
+            <span class="date">2018 - 2019</span>
+            <a href="https://ipk.gstu.by/" target="_blank">
+              <span>Gomel State Technical University, Institute for Advanced
+                Studies
+                and Retraining, programmer - Web-designer</span>
+            </a>
+          </li>
+          <li>
+            <span class="date">2008-2011</span>
+            <a href="http://mspu.by/" target="_blank">
+              <span>Mozyr State Pedagogical University, primary school teacher</span>
+            </a>
+          </li>
+          <li>
+            <span class="date">2001-2005</span>
+            <a href="https://gpk.by/" target="_blank">
+              <span>Gomel State Pedagogical College, primary school teacher</span>
+            </a>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <header>
+          <span class="material-icons-outlined  material-icons">
+          code
+          </span>
+          <h2>Experience</h2>
+        </header>
+        
         <ul>
           <li></li>
           <li></li>
           <li></li>
         </ul>
-      </section>
-      <section>
-        <h2>Experience</h2>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </section>
+      </article>
     </section>
 
   </main>
