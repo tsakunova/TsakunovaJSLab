@@ -41,21 +41,21 @@ body main .material-icons {
   transform: translate(0, 25%);
   transition: all 0.5s ease-in-out;
 }
-body main aside {
+body main .aside {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-body main aside .aside_name-block {
+body main .aside .aside_name-block {
   text-transform: uppercase;
   padding: 40px;
 }
 @media (max-width: 800px) {
-  body main aside .aside_name-block {
+  body main .aside .aside_name-block {
     padding: 40px 0;
   }
 }
-body main aside .aside_name-block .name-block_photo {
+body main .aside .aside_name-block .name-block_photo {
   display: flex;
   margin: auto;
   width: 200px;
@@ -64,79 +64,84 @@ body main aside .aside_name-block .name-block_photo {
   border-radius: 50%;
 }
 @media (max-width: 840px) {
-  body main aside .aside_name-block .name-block_photo {
+  body main .aside .aside_name-block .name-block_photo {
     width: 120px;
     height: 120px;
   }
 }
-body main aside .aside_name-block .name-block_photo img {
+body main .aside .aside_name-block .name-block_photo img {
   width: 100%;
 }
-body main aside .aside_name-block h1 {
+body main .aside .aside_name-block .main-title {
   cursor: default;
   font-weight: 400;
   font-size: 42px;
 }
 @media (max-width: 1200px) {
-  body main aside .aside_name-block h1 {
+  body main .aside .aside_name-block .main-title {
     font-size: 32px;
   }
 }
-body main aside .aside_name-block h1 span {
+body main .aside .aside_name-block .main-title span {
   display: block;
   font-weight: 900;
   letter-spacing: 5px;
 }
-body main aside .aside_name-block p {
+body main .aside .aside_name-block p {
   letter-spacing: 5px;
 }
-body main aside .aside_info-block {
+body main .aside .aside_info-block {
   height: 100%;
   background: #ddcdcd;
 }
-body main aside .aside_info-block .info-block_section-name {
+body main .aside .aside_info-block .info-block_section-name {
   background-color: #484848;
   display: inline-block;
   padding: 10px 0;
   width: 200px;
+  cursor: default;
   color: #f4f4f4;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 2px;
   margin: -15px 0 20px;
+  transition: all 0.5s ease-in-out;
 }
-body main aside .aside_info-block ul {
+body main .aside .aside_info-block .info-block_section-name:hover {
+  background-color: #747070;
+}
+body main .aside .aside_info-block .contact_list {
   margin-bottom: 40px;
   list-style-type: none;
 }
 @media (max-width: 800px) {
-  body main aside .aside_info-block ul {
+  body main .aside .aside_info-block .contact_list {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
   }
 }
-body main aside .aside_info-block ul li {
+body main .aside .aside_info-block .contact_list li {
   position: relative;
   padding: 10px 0 10px 40px;
   text-align: left;
   font-size: 18px;
 }
 @media (max-width: 800px) {
-  body main aside .aside_info-block ul li {
+  body main .aside .aside_info-block .contact_list li {
     padding: 10px;
   }
 }
-body main aside .aside_info-block ul li a {
+body main .aside .aside_info-block .contact_list li a {
   display: block;
   color: #484848;
   text-decoration: none;
 }
-body main aside .aside_info-block ul li span {
+body main .aside .aside_info-block .contact_list li span {
   padding-right: 10px;
 }
-body main aside .aside_info-block ul li:hover .material-icons {
+body main .aside .aside_info-block .contact_list li:hover .material-icons {
   transform: translate(0, 25%) scale(1.1) rotate(15deg);
 }
 body main .full-info {
@@ -150,7 +155,7 @@ body main .full-info {
 body main .full-info article {
   margin-bottom: 40px;
 }
-body main .full-info article header {
+body main .full-info article .article-header {
   display: flex;
   justify-content: flex-start;
   gap: 10px;
@@ -159,15 +164,15 @@ body main .full-info article header {
   font-weight: 700;
   margin-bottom: 50px;
 }
-body main .full-info article header .material-icons {
+body main .full-info article .article-header .material-icons {
   font-size: 36px;
   transform: none;
 }
-body main .full-info article header h2 {
+body main .full-info article .article-header .header-title {
   position: relative;
   width: 100%;
 }
-body main .full-info article header h2::after {
+body main .full-info article .article-header .header-title::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -188,6 +193,7 @@ body main .full-info article .projects_list li .date {
 }
 body main .full-info article .education_list li a,
 body main .full-info article .projects_list li a {
+  padding-left: 20px;
   color: #484848;
   cursor: pointer;
   font-weight: 700;
@@ -195,8 +201,20 @@ body main .full-info article .projects_list li a {
   text-decoration: none;
 }
 body main .full-info article .projects_list li {
-  list-style-position: inside;
-  list-style-image: url(assets/task_alt.svg);
+  position: relative;
+  display: flex;
+  list-style-type: none;
+}
+body main .full-info article .projects_list li::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  top: 12px;
+  left: 0;
+  background: url(assets/task_alt.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=main.css.map */

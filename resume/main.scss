@@ -4,6 +4,11 @@ $bg-main: #f4f4f4;
 $text-color: #484848;
 $main-transition: all 0.5s ease-in-out;
 $main-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
+$indent: 40px;
+
+@mixin text-decoration {
+  
+}
 
 * {
   box-sizing: border-box;
@@ -28,7 +33,7 @@ body {
   main {
     background-color: #f4f4f4;
     max-width: 1024px;
-    margin: 40px auto;
+    margin: $indent auto;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
@@ -40,7 +45,7 @@ body {
 
     @media (max-width: 800px) {
       flex-direction: column;
-      margin: 40px 20px;
+      margin: $indent 20px;
     }
 
     .material-icons {
@@ -48,17 +53,17 @@ body {
       transition: $main-transition;
     }
 
-    aside {
+    .aside {
       display: flex;
       flex-direction: column;
       text-align: center;
 
       .aside_name-block {
         text-transform: uppercase;
-        padding: 40px;
+        padding: $indent;
 
         @media (max-width: 800px) {
-          padding: 40px 0;
+          padding: $indent 0;
         }
 
         .name-block_photo {
@@ -80,7 +85,7 @@ body {
 
         }
 
-        h1 {
+        .main-title {
           cursor: default;
           font-weight: 400;
           font-size: 42px;
@@ -110,16 +115,21 @@ body {
           display: inline-block;
           padding: 10px 0;
           width: 200px;
+          cursor: default;
           color: $bg-main;
           text-transform: uppercase;
           font-weight: 600;
           font-size: 18px;
           letter-spacing: 2px;
           margin: -15px 0 20px;
+          transition: $main-transition;
+          &:hover{
+            background-color: #747070;
+          }
         }
 
-        ul {
-          margin-bottom: 40px;
+        .contact_list {
+          margin-bottom: $indent;
           list-style-type: none;
 
           @media (max-width:800px) {
@@ -154,21 +164,19 @@ body {
           }
         }
       }
-
-
     }
 
     .full-info {
-      padding: 40px;
+      padding: $indent;
 
       @media (max-width:800px) {
-        padding: 40px 20px;
+        padding: $indent 20px;
       }
 
       article {
-        margin-bottom: 40px;
+        margin-bottom: $indent;
 
-        header {
+        .article-header {
           display: flex;
           justify-content: flex-start;
           gap: 10px;
@@ -182,7 +190,7 @@ body {
             transform: none;
           }
 
-          h2 {
+          .header-title {
             position: relative;
             width: 100%;
 
@@ -210,6 +218,7 @@ body {
             }
 
             a {
+              padding-left: 20px;
               color: $text-color;
               cursor: pointer;
               font-weight: 700;
@@ -221,8 +230,20 @@ body {
 
         .projects_list {
           li {
-            list-style-position: inside;
-            list-style-image: url(assets/task_alt.svg);
+            position: relative;
+            display: flex;
+            list-style-type: none;
+            &::before{
+              position: absolute;
+              content: '';
+              width: 15px;
+              height: 15px;
+              top: 12px;
+              left: 0;
+              background: url(assets/task_alt.svg);
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
           }
         }
       }
