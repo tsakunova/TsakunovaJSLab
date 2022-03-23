@@ -130,6 +130,7 @@ body main .aside .aside_info-block .contact_list li {
 @media (max-width: 800px) {
   body main .aside .aside_info-block .contact_list li {
     padding: 10px;
+    font-size: 16px;
   }
 }
 body main .aside .aside_info-block .contact_list li a {
