@@ -97,8 +97,7 @@ body main .aside .aside_info-block {
 body main .aside .aside_info-block .info-block_section-name {
   background-color: #484848;
   display: inline-block;
-  padding: 10px 0;
-  width: 200px;
+  padding: 10px 50px;
   cursor: default;
   color: #f4f4f4;
   text-transform: uppercase;
