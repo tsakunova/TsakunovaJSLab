@@ -1,0 +1,44 @@
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main .header {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.header a {
+  text-decoration: none;
+  color: #000;
+}
+
+.task h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.animation-container {
+  padding: 20px;
+  border: 1px dashed #000;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ff0000;
+}
+
+.anim1 .square {
+  animation: anim1 4s infinite;
+}
+
+@keyframes anim1 {
+  0% {
+    margin-left: 20px;
+  }
+
+  100% {
+    margin-left: 80%;
+  }
+}
