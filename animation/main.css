@@ -6,15 +6,18 @@
 .main .header {
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .header a {
+  background-color: #b49595;
+  padding: 10px 20px;
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
+  border-radius: 10px;
 }
 
 .task h2 {
-  text-transform: uppercase;
   text-align: center;
 }
 
@@ -54,19 +57,22 @@
 .animation4 .square {
   animation: anim4 4s infinite;
 }
-.animation5 .rectangle-wrapper{
+
+.animation5 .rectangle-wrapper {
   width: 50%;
   height: 30px;
   border: 1px solid #ff0000;
   margin: 0 auto;
 }
-.animation5 .rectangle-bgc{
+
+.animation5 .rectangle-bgc {
   width: 0;
   height: 100%;
   background-color: #ff0000;
   animation: anim5 10s infinite;
 }
-.animation6 .hover-wrapper{
+
+.animation6 .hover-wrapper {
   width: 20%;
   height: 40px;
   display: flex;
@@ -75,18 +81,24 @@
   margin-bottom: 20px;
   border: 1px solid #ff0000;
   font-weight: 700;
-  
+  cursor: pointer;
+
 }
-.animation6 .block{
+
+.animation6 .block {
   width: 20%;
   height: 40px;
   border: 1px solid #1900ff;
-  animation: anim6 3s ease alternate infinite;
-	animation-play-state: paused;
+  animation: anim6 5s ease alternate infinite;
+  animation-play-state: paused;
 }
-.hover-wrapper:hover + .block {
+
+.hover-wrapper:hover+.block {
   animation-play-state: running;
 }
+
+/* Animations */
+/* Task2 */
 @keyframes anim1 {
   0% {
     margin-left: 20px;
@@ -97,6 +109,7 @@
   }
 }
 
+/* Task3 */
 @keyframes anim2 {
   0% {
     background-color: transparent;
@@ -107,6 +120,7 @@
   }
 }
 
+/* Task4 */
 @keyframes anim3 {
   0% {
     top: 20px;
@@ -134,29 +148,38 @@
   }
 }
 
+/* Task6 */
 @keyframes anim4 {
   0% {
     margin-left: 20px;
   }
-  50%{
+
+  50% {
     margin-left: 80%;
   }
+
   100% {
     margin-left: 20px;
   }
 }
+
+/* Task9 */
 @keyframes anim5 {
   0% {
     width: 0;
   }
+
   100% {
     width: 100%;
   }
 }
+
+/* Task11 */
 @keyframes anim6 {
   0% {
     width: 20%;
   }
+
   100% {
     width: 100%;
   }
