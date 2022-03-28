@@ -29,8 +29,27 @@
   border: 1px solid #ff0000;
 }
 
-.anim1 .square {
+.animation1 .square {
   animation: anim1 4s infinite;
+}
+
+.animation2 .square {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  animation: anim2 4s infinite;
+}
+
+.animation3 {
+  height: 300px;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.animation3 .square {
+  position: absolute;
+  animation: anim3 8s linear 20;
 }
 
 @keyframes anim1 {
@@ -40,5 +59,42 @@
 
   100% {
     margin-left: 80%;
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: #ff0000;
+  }
+}
+
+@keyframes anim3 {
+  0% {
+    top: 20px;
+    left: 20px;
+  }
+
+  25% {
+    top: 20px;
+    left: 60%;
+  }
+
+  50% {
+    top: 70%;
+    left: 60%;
+  }
+
+  75% {
+    top: 70%;
+    left: 20px;
+  }
+
+  100% {
+    top: 20px;
+    left: 20px;
   }
 }
