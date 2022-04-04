@@ -1,11 +1,20 @@
 {
-  "name": "npm-task",
+  "name": "js-npm-task",
   "version": "1.0.0",
-  "description": "task npm",
+  "description": "npm-task",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build_sass": "sass style.scss style.css",
+    "watch_sass": "sass style.scss style.css -w"
   },
-  "author": "Tsakunova",
-  "license": "ISC"
+  "keywords": [],
+  "author": "Tsakunova Tatsiana",
+  "license": "ISC",
+  "dependencies": {
+    "i18next": "^21.6.14"
+  },
+  "devDependencies": {
+    "sass": "^1.49.11"
+  }
 }

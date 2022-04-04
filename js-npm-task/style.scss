@@ -1,0 +1,78 @@
+body {
+  background-color: #e7ece2;
+
+  .switch-lang {
+    margin: 0 auto;
+    position: absolute;
+    left: 47vw;
+    top: 1rem;
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+
+      & input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked+.slider:before {
+          -webkit-transform: translateX(24px);
+          -ms-transform: translateX(24px);
+          transform: translateX(24px);
+          content: "RU";
+          background: #d8e9b1;
+          background-size: 70%;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        &:checked+.slider {
+          background-color: #8f909496;
+        }
+
+        &:focus+.slider {
+          box-shadow: 0 0 1px #e1eef1;
+        }
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #8f909496;
+        transition: 0.4s;
+
+        &.round {
+          border-radius: 34px;
+
+          &:before {
+            border-radius: 50%;
+          }
+        }
+
+        &:before {
+          position: absolute;
+          content: "EN";
+          padding: 7px;
+          left: 0px;
+          bottom: 4px;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          transition: 0.4s;
+          box-shadow: 0 0px 15px #2020203d;
+          background: #b8e7d5;
+          background-size: 70%;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+  }
+}
