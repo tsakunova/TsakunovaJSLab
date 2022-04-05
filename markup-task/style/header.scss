@@ -1,0 +1,45 @@
+.header {
+  position: relative;
+  background-image: url(../assets/img/header/bg.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  background-color:rgba(96, 96, 110, 1);
+  filter: grayscale(0.5);
+  color: $text-color;
+
+  &__wrapper {
+    font-family: $montserrat-bold;
+    text-transform: uppercase;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 43px;
+  }
+
+  &__logo {
+    font-size: 18px;
+    
+  }
+
+  &__menu {
+  }
+
+  &__title {
+    text-align: center;
+    padding-top: 210px;
+    padding-bottom: 28px;
+    font-size: 36px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+.wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+}

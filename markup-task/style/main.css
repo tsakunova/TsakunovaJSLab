@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("../assets/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/OpenSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.header {
+  position: relative;
+  background-image: url(../assets/img/header/bg.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  background-color: rgb(96, 96, 110);
+  filter: grayscale(0.5);
+  color: #60606E;
+}
+.header__wrapper {
+  font-family: "Montserrat Bold", sans-serif;
+  text-transform: uppercase;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 43px;
+}
+.header__logo {
+  font-size: 18px;
+}
+.header__title {
+  text-align: center;
+  padding-top: 210px;
+  padding-bottom: 28px;
+  font-size: 36px;
+}
+.header__subtitle {
+  text-align: center;
+  font-size: 14px;
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
