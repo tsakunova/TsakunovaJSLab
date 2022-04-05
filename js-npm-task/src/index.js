@@ -3,6 +3,10 @@ import i18next from 'i18next';
 
 const MONTH_NAME = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const WEEK_DAY_NAME = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const I18_LANG ={
+  ru: 'ru',
+  en: 'en'
+}
 
 const translationRu = {
   Sunday: 'Воскресенье',
@@ -84,7 +88,7 @@ const showTime = () => {
   const day = today.getDate();
   const weekDay = i18next.t(WEEK_DAY_NAME[today.getDay()]);
   time.innerHTML = `${addZero(hour)}<span>:</span>${addZero(min)}<span>:</span>${addZero(sec)}`;
-  if (i18next.language === 'en') {
+  if (i18next.language === I18_LANG.en) {
     week.innerHTML = `${weekDay}, ${month} ${day}`;
   } else {
     week.innerHTML = ` ${weekDay}, ${day} ${month}`;
@@ -105,15 +109,8 @@ const init = () => {
 
 const listnerLang = () => {
   sliderLang.addEventListener('click', () => {
-    if (sliderLang.checked === true) {
-      i18next.changeLanguage('ru', () => {
-        init();
-      });
-    } else {
-      i18next.changeLanguage('en', () => {
-        init();
-      });
-    }
+    const lang = sliderLang.checked ? I18_LANG.ru : I18_LANG.en;
+    i18next.changeLanguage(lang, init);
   });
 };
 

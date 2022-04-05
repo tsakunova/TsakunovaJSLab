@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path')
+const path = require('path');
 
 module.exports = {
     entry: {
@@ -19,20 +19,17 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Momentum',
-      template: path.resolve(__dirname, './src/index.html'), // шаблон
-      filename: 'index.html', // название выходного файла
+      title: 'NPM task',
+      template: path.resolve(__dirname, './src/index.html'),
+      filename: 'index.html',
     })],
   module: {
     rules: [
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
           "style-loader",
-          // Translates CSS into CommonJS
           "css-loader",
-          // Compiles Sass to CSS
           "sass-loader",
         ],
       },
