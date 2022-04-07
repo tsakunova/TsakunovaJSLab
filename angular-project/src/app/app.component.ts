@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-project';
+  title = 'Dynamic title - interpolation'
+  obj = {
+    a:1,
+    b:2
+  }
 }
