@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CounterService} from "./services/counter.service";
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Dynamic title - interpolation'
-  obj = {
-    a:1,
-    b:2
-  }
+  constructor(public counterService: CounterService) {}
+  title = 'Angular Task';
+  paragraph = 'Task list'
 }
