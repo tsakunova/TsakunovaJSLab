@@ -1,7 +1,14 @@
 @import "variables";
+@import "mixins";
 @import "fonts";
 @import "header";
+@import "we-do";
+@import "benefits";
+
 * {
   margin: 0;
   padding: 0;
+}
+body{
+  color: $text-color;
 }

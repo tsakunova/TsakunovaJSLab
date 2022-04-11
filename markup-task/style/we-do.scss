@@ -1,0 +1,48 @@
+.we-do {
+  
+  &__title {
+    @include section-title;
+    font-size: 30px;
+  }
+
+  &__subtitle {
+  }
+
+  &__content {
+    display: flex;
+    gap: 36px;
+    justify-content: space-between;
+    margin-bottom: 150px;
+  }
+
+  &__column {
+   
+  }
+  &__img{
+    width: 100%;
+  }
+
+  &__text {
+    margin-top: -10px;
+    margin-bottom: 33px;
+    font-family: $open-sans;
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+.title-block {
+  @include section-title-block;
+}
+.we_do {
+
+  &__list {
+    column-count: 2;
+    column-gap: 37px;
+    li{
+      font-size: 14px;
+      line-height: 30px;
+      @include li-style-type;
+    }
+    
+  }
+}

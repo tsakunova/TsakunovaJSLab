@@ -1,0 +1,50 @@
+@mixin section-title {
+  position: relative;
+  font-family: $montserrat-bold;
+  font-size: 30px;
+  text-transform: uppercase;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 67px;
+    height: 21px;
+    bottom: -2px;
+    left: 8px;
+    background-color: $block-color;
+    z-index: -1;
+  }
+  &+p{
+    margin-top: 15px;
+    max-width: 720px;
+    font-family: $open-sans;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+  }
+
+}
+@mixin section-title-block{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 143px;
+  margin-bottom: 97px;
+}
+
+@mixin li-style-type{
+  position: relative;
+  list-style-type: none;
+  padding-left: 20px;
+  font-family: $open-sans;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: url(../assets/img/we-do/checkbox.svg) no-repeat center;
+    top: 10px;
+    left: 0;
+
+  }
+}
