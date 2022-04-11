@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
-  background-color:rgba(96, 96, 110, 1);
+  background-color: rgba(96, 96, 110, 1);
   filter: grayscale(0.5);
   color: $text-color;
 
@@ -13,6 +13,7 @@
     font-family: $montserrat-bold;
     text-transform: uppercase;
   }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -21,11 +22,10 @@
 
   &__logo {
     font-size: 18px;
-    
+
   }
 
-  &__menu {
-  }
+  &__menu {}
 
   &__title {
     text-align: center;
@@ -39,6 +39,7 @@
     font-size: 14px;
   }
 }
+
 .wrapper {
   max-width: $max-width;
   margin: 0 auto;

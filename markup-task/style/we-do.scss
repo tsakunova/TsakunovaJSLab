@@ -1,11 +1,8 @@
 .we-do {
-  
+
   &__title {
     @include section-title;
     font-size: 30px;
-  }
-
-  &__subtitle {
   }
 
   &__content {
@@ -15,10 +12,9 @@
     margin-bottom: 150px;
   }
 
-  &__column {
-   
-  }
-  &__img{
+  &__column {}
+
+  &__img {
     width: 100%;
   }
 
@@ -29,20 +25,26 @@
     font-size: 14px;
     line-height: 30px;
   }
-}
-.title-block {
+  
+  .title-block {
   @include section-title-block;
+  margin-top: 143px;
 }
+
+}
+
+
 .we_do {
 
   &__list {
     column-count: 2;
     column-gap: 37px;
-    li{
+
+    li {
       font-size: 14px;
       line-height: 30px;
       @include li-style-type;
     }
-    
+
   }
 }
