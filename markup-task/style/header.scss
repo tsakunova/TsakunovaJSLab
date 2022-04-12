@@ -23,9 +23,45 @@
   &__logo {
     font-size: 18px;
 
+    a {
+      color: $text-color;
+      text-decoration: none;
+    }
   }
 
-  &__menu {}
+  &__menu {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+  }
+
+  &__burger-menu {
+    width: 32px;
+    height: 1px;
+    background-color: $text-color;
+    top: 3px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 15px;
+      height: 1px;
+      background-color: $text-color;
+      top: 7px;
+      left: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 23px;
+      height: 1px;
+      background-color: $text-color;
+      top: 14px;
+      left: 0;
+    }
+  }
 
   &__title {
     text-align: center;
@@ -37,6 +73,10 @@
   &__subtitle {
     text-align: center;
     font-size: 14px;
+  }
+
+  .nav-list_none {
+    display: none;
   }
 }
 
