@@ -1,5 +1,4 @@
 .footer {
-
   &__wrapper {
     padding: 47px 0;
     display: flex;
@@ -14,10 +13,6 @@
       gap: 20px;
     }
   }
-
-  &__nav {}
-
-  &__right-block {}
 
   &__create-info {
     margin-bottom: 25px;
@@ -43,13 +38,10 @@
     justify-content: center;
   }
 
-
-
   li {
     position: relative;
     padding: 0 19px;
     letter-spacing: 0.4px;
-
 
     &:first-child {
       padding-left: 0;
@@ -86,7 +78,6 @@
       height: 1px;
       background-color: $block-color;
       transition: $card-transition;
-
     }
   }
 

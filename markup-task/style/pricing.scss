@@ -64,13 +64,12 @@
     background-color: $block-color;
   }
 
-  h3 {
+  &__title {
     margin-bottom: 10px;
     font-family: $montserrat-bold;
     font-size: 30px;
     text-transform: uppercase;
   }
-
 
   &__amount {
     width: 165px;
@@ -87,7 +86,6 @@
     text-align: center;
   }
 
-
   &__list {
     margin-bottom: 40px;
 
@@ -98,7 +96,6 @@
       font-family: $open-sans;
     }
   }
-
 
   &__btn {
     font-size: 14px;

@@ -20,7 +20,7 @@
       flex-direction: column;
     }
 
-    h3 {
+    .newsletter__title {
       font-size: 30px;
       line-height: 48px;
       letter-spacing: -0.7px;
@@ -62,7 +62,7 @@
     padding: 10px 25px;
     margin-top: 12px;
 
-    h3 {
+    .newsletter__subtitle {
       font-size: 24px;
       line-height: 38px;
       letter-spacing: -0.7px;
@@ -89,7 +89,6 @@
         justify-content: center;
       }
     }
-
   }
 
   &__email {

@@ -10,7 +10,6 @@
     justify-content: center;
   }
 
-
   &__item {
     text-align: center;
   }
@@ -21,7 +20,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 
   &__icon {
     height: 55px;
@@ -40,26 +38,23 @@
       background-color: $block-color;
       z-index: -1;
     }
+  }
 
+  &__title {
+    padding: 20px 0 3px;
+    font-family: $montserrat-bold;
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: uppercase;
   }
 
   &__text {
-    h3 {
-      padding: 20px 0 3px;
-      font-family: $montserrat-bold;
-      font-size: 18px;
-      line-height: 30px;
-      text-transform: uppercase;
-
-    }
-
     p {
       max-width: 720px;
       font-family: $open-sans;
       text-align: center;
       line-height: 30px;
       font-size: 14px;
-
     }
   }
 }

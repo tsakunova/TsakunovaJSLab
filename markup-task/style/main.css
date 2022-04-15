@@ -267,7 +267,7 @@
   background-color: rgb(123, 238, 199);
   z-index: -1;
 }
-.benefits-item__text h3 {
+.benefits-item__title {
   padding: 20px 0 3px;
   font-family: "Montserrat Bold", sans-serif;
   font-size: 18px;
@@ -368,7 +368,7 @@
   right: -10px;
   background-color: rgb(123, 238, 199);
 }
-.pricing-card h3 {
+.pricing-card__title {
   margin-bottom: 10px;
   font-family: "Montserrat Bold", sans-serif;
   font-size: 30px;
@@ -449,7 +449,7 @@
     flex-direction: column;
   }
 }
-.newsletter__left-column h3 {
+.newsletter__left-column .newsletter__title {
   font-size: 30px;
   line-height: 48px;
   letter-spacing: -0.7px;
@@ -458,7 +458,7 @@
   margin-bottom: 17px;
 }
 @media (max-width: 900px) {
-  .newsletter__left-column h3 {
+  .newsletter__left-column .newsletter__title {
     text-align: center;
   }
 }
@@ -489,7 +489,7 @@
   padding: 10px 25px;
   margin-top: 12px;
 }
-.newsletter__right-column h3 {
+.newsletter__right-column .newsletter__subtitle {
   font-size: 24px;
   line-height: 38px;
   letter-spacing: -0.7px;
@@ -497,7 +497,7 @@
   font-family: "Montserrat Bold", sans-serif;
 }
 @media (max-width: 900px) {
-  .newsletter__right-column h3 {
+  .newsletter__right-column .newsletter__subtitle {
     text-align: center;
   }
 }
