@@ -1,3 +1,30 @@
+.animate-block {
+  transform: translate(0px, 80%);
+  opacity: 0;
+  transition: all 0.6s ease 0s;
+}
+.animate-block:nth-child(2) {
+  transition: all 0.6s ease 0.2s;
+}
+.animate-block:nth-child(3) {
+  transition: all 0.6s ease 0.4s;
+}
+.animate-block:nth-child(4) {
+  transition: all 0.6s ease 0.6s;
+}
+.animate-block.active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 200%;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
 @font-face {
   font-family: "Montserrat Bold";
   src: url("../assets/fonts/Montserrat-Bold.ttf") format("truetype");
@@ -25,6 +52,7 @@
   height: 500px;
   background-color: rgb(96, 96, 110);
   filter: grayscale(0.5);
+  cursor: default;
   color: #60606E;
 }
 .header__wrapper {
@@ -75,9 +103,21 @@
 }
 .header__title {
   text-align: center;
-  padding-top: 196px;
+  padding-top: 185px;
   padding-bottom: 18px;
   font-size: 36px;
+  background: linear-gradient(90deg, #d3d2d2 0%, #60606e 37%, #dbdada 83%);
+  background-size: 200% 100px;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient;
+  animation-delay: 0;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  transition: font-size 500ms ease-in-out;
 }
 .header__subtitle {
   text-align: center;
@@ -141,20 +181,24 @@
   margin-bottom: 97px;
   margin-top: 143px;
 }
-
-.we_do__list {
+.we-do__list {
   column-count: 2;
   column-gap: 37px;
 }
-.we_do__list li {
+.we-do__list.animate-block.active li {
+  transform: translate(0, 0);
+}
+.we-do__list.animate-block li {
   font-size: 14px;
   line-height: 30px;
   position: relative;
   list-style-type: none;
   padding-left: 20px;
   font-family: "Open Sans", sans-serif;
+  transform: translate(-120%, 0);
+  transition: all 0.3s ease 0;
 }
-.we_do__list li::before {
+.we-do__list.animate-block li::before {
   content: "";
   position: absolute;
   width: 11px;
@@ -334,6 +378,11 @@
   font-family: "Montserrat", sans-serif;
   text-align: center;
   padding: 0 20px;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+}
+.pricing-card__btn:hover {
+  background-color: #65c5a4;
 }
 
 .newsletter {
@@ -365,6 +414,11 @@
   font-family: "Montserrat Bold", sans-serif;
   text-align: center;
   padding: 0 30px;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+}
+.newsletter__btn:hover {
+  background-color: #60606E;
 }
 .newsletter__right-column {
   max-width: 504px;
@@ -413,6 +467,11 @@
   font-family: "Montserrat Bold", sans-serif;
   text-align: center;
   padding: 0 45px;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+}
+.newsletter__send-btn:hover {
+  background-color: #65c5a4;
 }
 
 .footer__wrapper {
@@ -453,13 +512,39 @@
   display: block;
   text-decoration: none;
   color: #60606E;
+  transition: 0.5s all ease-in-out;
+  position: relative;
+}
+.nav-list a:hover, .nav-list a:hover:before {
+  color: rgb(123, 238, 199);
+  width: 100%;
+}
+.nav-list a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: rgb(123, 238, 199);
+  transition: 0.5s all ease-in-out;
 }
 
 .social-list {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
-  gap: 18px;
+  gap: 17px;
+}
+.social-list svg {
+  width: 16px;
+  height: 16px;
+  fill: #60606E;
+  transition: 0.5s all ease-in-out;
+}
+.social-list svg:hover {
+  fill: rgb(123, 238, 199);
+  transform: scale(1.2);
 }
 
 * {

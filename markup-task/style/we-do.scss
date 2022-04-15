@@ -31,20 +31,22 @@
   margin-top: 143px;
 }
 
-}
-
-
-.we_do {
-
-  &__list {
+ &__list {
     column-count: 2;
     column-gap: 37px;
+  
+    &.animate-block.active li{
+      transform: translate(0, 0);
+    }
 
-    li {
+    &.animate-block li {
       font-size: 14px;
       line-height: 30px;
       @include li-style-type;
+        transform: translate(-120%, 0);
+    transition: all 0.3s ease 0;
     }
 
   }
 }
+

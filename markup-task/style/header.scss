@@ -7,6 +7,7 @@
   height: 500px;
   background-color: rgba(96, 96, 110, 1);
   filter: grayscale(0.5);
+  cursor: default;
   color: $text-color;
 
   &__wrapper {
@@ -65,9 +66,22 @@
 
   &__title {
     text-align: center;
-    padding-top: 196px;
+    padding-top: 185px;
     padding-bottom: 18px;
     font-size: 36px;
+    background: $header-gradient;
+    background-size: 200% 100px;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient;
+    animation-delay: 0;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    transition: font-size 500ms ease-in-out;
+
   }
 
   &__subtitle {

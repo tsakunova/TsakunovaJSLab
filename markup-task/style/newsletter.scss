@@ -30,6 +30,11 @@
     font-family: $montserrat-bold;
     text-align: center;
     padding: 0 30px;
+    cursor: pointer;
+    transition: $card-transition;
+    &:hover{
+      background-color: $text-color;
+    }
   }
 
   &__right-column {
@@ -83,5 +88,10 @@
         font-family: $montserrat-bold;
         text-align: center;
         padding: 0 45px;
+        cursor: pointer;
+        transition: $card-transition;
+        &:hover{
+          background-color: $hover-block-color;
+        }
       }
 }

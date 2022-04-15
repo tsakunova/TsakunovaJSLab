@@ -31,6 +31,7 @@
     position: relative;
     padding: 0 19px;
     letter-spacing: 0.4px;
+    
 
     &:first-child {
       padding-left: 0;
@@ -48,6 +49,23 @@
     display: block;
     text-decoration: none;
     color: $text-color;
+    transition: $card-transition;
+    position: relative;
+    &:hover, &:hover:before{
+      color: $block-color;
+      width: 100%;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: $block-color;
+      transition: $card-transition;
+
+    }
   }
 
 }
@@ -56,5 +74,15 @@
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
-  gap: 18px;
+  gap: 17px;
+  svg{
+    width: 16px;
+    height: 16px;
+    fill: $text-color;
+    transition: $card-transition;
+    &:hover{
+      fill: $block-color;
+      transform: scale(1.2);
+    }
+  }
 }
