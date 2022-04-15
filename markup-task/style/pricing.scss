@@ -1,8 +1,13 @@
 .pricing {
   margin-bottom: 150px;
+
   .title-block {
     @include section-title-block;
     margin-top: 137px;
+
+    @media (max-width: 1200px) {
+      margin-top: 80px;
+    }
   }
 
   &__title {
@@ -14,6 +19,11 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
+
+    @media (max-width: 900px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 }
 
@@ -23,6 +33,11 @@
   padding: 28px 30px 40px;
   transition: $card-transition;
   overflow: hidden;
+
+  @media (max-width: 900px) {
+    box-sizing: border-box;
+    width: 350px;
+  }
 
   &:hover {
     box-shadow: $card-shadow;
@@ -75,6 +90,7 @@
 
   &__list {
     margin-bottom: 40px;
+
     li {
       @include li-style-type;
       font-size: 14px;
@@ -96,8 +112,9 @@
     padding: 0 20px;
     cursor: pointer;
     transition: $card-transition;
-        &:hover{
-          background-color: $hover-block-color;
-        }
+
+    &:hover {
+      background-color: $hover-block-color;
+    }
   }
 }

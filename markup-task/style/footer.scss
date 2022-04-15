@@ -7,6 +7,12 @@
     font-family: $open-sans;
     text-transform: uppercase;
     font-size: 14px;
+
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
   }
 
   &__nav {}
@@ -20,6 +26,10 @@
   &__social {
     display: flex;
     justify-content: flex-end;
+
+    @media (max-width: 1200px) {
+      justify-content: center;
+    }
   }
 }
 
@@ -27,11 +37,19 @@
   list-style-type: none;
   display: flex;
 
+  @media (max-width: 900px) {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+
   li {
     position: relative;
     padding: 0 19px;
     letter-spacing: 0.4px;
-    
+
 
     &:first-child {
       padding-left: 0;
@@ -51,11 +69,15 @@
     color: $text-color;
     transition: $card-transition;
     position: relative;
-    &:hover, &:hover:before{
+    text-align: center;
+
+    &:hover,
+    &:hover:before {
       color: $block-color;
       width: 100%;
     }
-    &:before{
+
+    &:before {
       content: '';
       position: absolute;
       left: 0;
@@ -75,12 +97,14 @@
   display: flex;
   justify-content: flex-end;
   gap: 17px;
-  svg{
+
+  svg {
     width: 16px;
     height: 16px;
     fill: $text-color;
     transition: $card-transition;
-    &:hover{
+
+    &:hover {
       fill: $block-color;
       transform: scale(1.2);
     }

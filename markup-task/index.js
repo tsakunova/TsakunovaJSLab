@@ -9,7 +9,7 @@ if(animateBlocks.length>0){
       const animItemOffset = offset(animItem).top;
       const animStart = 8;
 
-      let animItemPoint = window.innerHeight - animItemHeight / animStart;
+      let animItemPoint = window.innerHeight - animItemHeight / animStart+150;
 
       if(animItemHeight > window.innerHeight){
         animItemPoint = window.innerHeight - window.innerHeight/animStart;

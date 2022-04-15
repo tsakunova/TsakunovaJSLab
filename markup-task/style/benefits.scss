@@ -4,6 +4,13 @@
   align-items: flex-start;
   gap: 27px;
 
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+  }
+
+
   &__item {
     text-align: center;
   }
@@ -14,7 +21,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
 
   &__icon {
     height: 55px;
@@ -29,7 +36,7 @@
       width: 50px;
       height: 20px;
       bottom: 4px;
-      left: 100px;
+      left: 38%;
       background-color: $block-color;
       z-index: -1;
     }

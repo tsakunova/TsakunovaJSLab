@@ -5,10 +5,20 @@
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__left-column {
     color: #FFFFFF;
+
+    @media (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     h3 {
       font-size: 30px;
@@ -17,6 +27,10 @@
       text-transform: uppercase;
       font-family: $montserrat-bold;
       margin-bottom: 17px;
+
+      @media (max-width: 900px) {
+        text-align: center;
+      }
     }
   }
 
@@ -32,8 +46,13 @@
     padding: 0 30px;
     cursor: pointer;
     transition: $card-transition;
-    &:hover{
+
+    &:hover {
       background-color: $text-color;
+    }
+
+    @media (max-width: 1200px) {
+      margin: 0 auto;
     }
   }
 
@@ -49,6 +68,10 @@
       letter-spacing: -0.7px;
       text-transform: uppercase;
       font-family: $montserrat-bold;
+
+      @media (max-width: 900px) {
+        text-align: center;
+      }
     }
 
     p {
@@ -59,39 +82,53 @@
 
     form {
       margin-top: 25px;
-      margin-bottom: 7px;      
+      margin-bottom: 7px;
+
+      @media (max-width: 900px) {
+        display: flex;
+        justify-content: center;
+      }
     }
-    
+
   }
+
   &__email {
-        width: 374px;
-        height: 52px;
-        margin-left: -5px;
-        padding-left: 20px;
-        outline: none;
-        border: 1px solid rgba(0,0,0,0.1);
-        border-right: none;
-        box-sizing: border-box;
-        &::placeholder{
-          font-size: 12px;
-          text-transform: uppercase;
-          color: #CDCDCD;
-        }
-      }
-      &__send-btn{
-        font-size: 14px;
-        line-height: 49px;
-        text-transform: uppercase;
-        border: 1.5px solid $block-color;
-        background-color: $block-color;
-        color: #ffffff;
-        font-family: $montserrat-bold;
-        text-align: center;
-        padding: 0 45px;
-        cursor: pointer;
-        transition: $card-transition;
-        &:hover{
-          background-color: $hover-block-color;
-        }
-      }
+    width: 374px;
+    height: 52px;
+    margin-left: -5px;
+    padding-left: 20px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: none;
+    font-family: $montserrat-reg;
+    box-sizing: border-box;
+
+    &::placeholder {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #CDCDCD;
+    }
+
+    @media (max-width: 900px) {
+      width: 70%;
+    }
+  }
+
+  &__send-btn {
+    font-size: 14px;
+    line-height: 49px;
+    text-transform: uppercase;
+    border: 1.5px solid $block-color;
+    background-color: $block-color;
+    color: #ffffff;
+    font-family: $montserrat-bold;
+    text-align: center;
+    padding: 0 45px;
+    cursor: pointer;
+    transition: $card-transition;
+
+    &:hover {
+      background-color: $hover-block-color;
+    }
+  }
 }
