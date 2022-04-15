@@ -1,5 +1,4 @@
 .pricing {
-  margin-bottom: 150px;
 
   .title-block {
     @include section-title-block;
@@ -16,6 +15,7 @@
   }
 
   &__cards {
+    margin-bottom: 150px;
     display: flex;
     justify-content: space-between;
     gap: 30px;

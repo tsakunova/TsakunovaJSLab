@@ -155,7 +155,7 @@
 }
 .we-do__content {
   display: flex;
-  gap: 36px;
+  gap: 30px;
   justify-content: space-between;
   margin-bottom: 150px;
 }
@@ -164,6 +164,14 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 80px;
+  }
+}
+.we-do__column {
+  width: 50%;
+}
+@media (max-width: 1200px) {
+  .we-do__column {
+    width: 100%;
   }
 }
 .we-do__img {
@@ -274,9 +282,6 @@
   font-size: 14px;
 }
 
-.pricing {
-  margin-bottom: 150px;
-}
 .pricing .title-block {
   display: flex;
   flex-direction: column;
@@ -316,6 +321,7 @@
   font-size: 14px;
 }
 .pricing__cards {
+  margin-bottom: 150px;
   display: flex;
   justify-content: space-between;
   gap: 30px;
