@@ -1,15 +1,27 @@
 .header {
   position: relative;
-  background-image: url(../assets/img/header/bg.jpg);
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   height: 500px;
-  background-color: rgba(96, 96, 110, 1);
-  filter: grayscale(0.5);
+
   cursor: default;
   color: $text-color;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-color: rgba(96, 96, 110, 1);
+    background-image: url(../assets/img/header/bg.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    width: 100%;
+    filter: grayscale(1);
+    opacity: 0.7;
+    z-index: -1
+  }
 
   &__wrapper {
     font-family: $montserrat-bold;
@@ -84,9 +96,44 @@
     transition: font-size 500ms ease-in-out;
   }
 
-  &__subtitle {
-    text-align: center;
-    font-size: 14px;
+  &__breadcrumbs {
+    .breadcrumbs__list {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      gap: 15px;
+
+      .breadcrumbs__item {
+        position: relative;
+
+        a {
+          text-align: center;
+          font-size: 14px;
+          color: $text-color;
+          text-decoration: none;
+          pointer-events: none;
+          transition: $card-transition;
+        }
+
+        &:first-child::after {
+          content: '/';
+          position: absolute;
+          top: 0;
+          right: -10px;
+        }
+
+        &:not(&_active) {
+          a {
+            color: $text-unactive;
+            pointer-events: initial;
+
+            &:hover {
+              color: $text-color;
+            }
+          }
+        }
+      }
+    }
   }
 
   .nav-list_none {
