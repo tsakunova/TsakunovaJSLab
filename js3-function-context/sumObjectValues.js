@@ -10,7 +10,7 @@ let object = {
 };
 sumObjectValues(object) // 25 */
 
-const summValues = (accum, curr) => !isNaN(curr) ? accum+curr : accum;
+const summValues = (accum, curr) => (typeof curr === 'number' && isFinite(curr)) ? accum+curr : accum;
 
 const sumObjectValuesApply = obj => Array.prototype.reduce.apply(Object.values(obj), [summValues , 0]);
 
