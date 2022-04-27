@@ -30,20 +30,24 @@
       ];
       render(data);
 
-      function delayLiveSearch() {
-        //your closure code here
+      function delayLiveSearch(func, delay) {
+        let timer;
+        return function(e) {
+          clearTimeout(timer);
+          timer = setTimeout(() => func(e), delay);
+        };
       }
+
+      const liveSearchWithDelay = delayLiveSearch(handleLiveSearch, 500)
 
       /********** Live Search *********/
 
       document.getElementById("liveSearchName").addEventListener('input', function(e) {
-          //TODO: use delayLiveSearch to delay backend call
-          handleLiveSearch(e);
+        liveSearchWithDelay(e)
         });
         
       document.getElementById("liveSearchSurname").addEventListener('input', function(e) {
-          //TODO: use delayLiveSearch to delay backend call
-          handleLiveSearch(e);
+        liveSearchWithDelay(e)
         });
 
       /********** Live Search *********/
