@@ -1,28 +1,28 @@
-const textArea = document.getElementById('text'),
-btn = document.getElementById('permutation'),
-result = document.getElementById('result');
+const textArea = document.getElementById('text');
+const btn = document.getElementById('permutation');
+const result = document.getElementById('result');
 
 const permutationText = str => {
-  let string = str.toLowerCase();
-  if(string.length <=2) return string.length === 2
-                              ?[string, string[1]+string[0]]
-                              :[string];
-  return string
+  let newStr = str.toLowerCase();
+  if (newStr.length <= 2) {
+    return newStr.length === 2 ? [newStr, newStr[1] + newStr[0]] : [newStr];
+  }
+  
+  return newStr
     .split('')
     .reduce(
-      (accum, letter, i) => 
-        accum.concat(permutationText(string.slice(0,i)+string.slice(i+1)).map(value => letter + value)), []
+      (accum, letter, i) =>
+      accum.concat(permutationText(newStr.slice(0, i) + newStr.slice(i + 1)).map(value => letter + value)), []
     )
 }
 
-const getSortUniqueValues = str => {
-  return Array.from(
-    new Set(permutationText(str)))
-      .sort()
-      .join(', ')
-}
+const getSortUniqueValues = str =>
+  Array
+    .from(new Set(permutationText(str)))
+    .sort()
+    .join(', ')
 
 btn.addEventListener('click', () => {
-  const textValue = textArea.value.trim();
-  result.textContent = getSortUniqueValues(textValue);
+  result.textContent = getSortUniqueValues(textArea.value.trim());
+  textArea.value = '';
 })
