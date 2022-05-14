@@ -25,9 +25,7 @@ class Box extends Entity {
   }
 
   addStuffs(...newStuffs) {
-    newStuffs.forEach(newStuff => {
-      this.stuffs.push(newStuff)
-    });
+    this.stuffs = [...this.stuffs, ...newStuffs]
   }
 
   toString() {
