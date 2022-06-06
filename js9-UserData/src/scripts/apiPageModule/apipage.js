@@ -1,5 +1,8 @@
-const { root, URL, load } = require('../constants');
-
+import {
+  root,
+  URL,
+  load
+} from '../constants';
 export class ApiPage {
   dataCategory;
   dataTitles;
@@ -8,12 +11,12 @@ export class ApiPage {
   currTitle;
 
   constructor() {
-    this.currCategory = 'Animals';
-    this.currTitle = 'AdoptAPet';
-    this.start();
+
   }
 
   async start() {
+    this.currCategory = 'Animals';
+    this.currTitle = 'AdoptAPet';
     await this.loadCategories();
     await this.loadTitles();
   }

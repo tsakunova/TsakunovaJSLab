@@ -1,7 +1,9 @@
-import { slider } from '../constants';
+import {
+  slider
+} from '../constants';
 
 export class Theme {
-  constructor() {
+  start() {
     this.startUse();
     this.addListenerTheme();
   }
@@ -12,10 +14,10 @@ export class Theme {
   }
 
   addListenerTheme() {
-    slider.addEventListener("change", ()=>{
+    slider.addEventListener("change", () => {
       localStorage.getItem('theme') === 'theme-dark' 
-      ? this.setTheme('theme-light')
-      : this.setTheme('theme-dark');
+        ? this.setTheme('theme-light') 
+        : this.setTheme('theme-dark');
     });
   }
 

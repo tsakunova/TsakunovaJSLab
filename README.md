@@ -1,11 +1,13 @@
+To install, you can use [npm](https://npmjs.org/)
 
-To install, you can use npm
+    $ npm install
 
-$ npm install
 To build project, you can use:
 
-$ npm run build
+    $ npm run build
+
 To start dev-server, you can use:
 
-$ npm run server
-The project builds into folder dist
+    $ npm run server
+
+The project builds into folder **dist**

@@ -4,12 +4,12 @@ import {
 } from '../constants';
 
 export class User {
-  constructor() {
+  
+  start(){
     this.getName();
     this.addListeners();
     this.getHourText();
   }
-
   getName() {
     if (localStorage.getItem('name') === null) {
       name.textContent = NAME_FIELD_TEXT;
@@ -26,20 +26,17 @@ export class User {
   };
 
   setName(e) {
+    const field = e.target;
     const storage = localStorage.getItem('name');
     if (e.type === 'keypress') {
       if (e.which === 13 || e.keyCode === 13) {
-        if (e.target.innerText === '') {
-          name.textContent = NAME_FIELD_TEXT;
-        }
-        localStorage.setItem('name', e.target.innerText);
+        !field.innerText && (name.textContent = NAME_FIELD_TEXT)
+        localStorage.setItem('name', field.innerText);
         name.blur();
       }
     } else {
-      if (e.target.innerText === '') {
-        name.textContent = storage;
-      }
-      localStorage.setItem('name', e.target.innerText);
+      !field.innerText && (name.textContent = storage)
+      localStorage.setItem('name', field.innerText);
     }
   }
 
