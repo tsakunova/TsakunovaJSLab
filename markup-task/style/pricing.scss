@@ -1,0 +1,117 @@
+.pricing {
+
+  .title-block {
+    @include section-title-block;
+    margin-top: 137px;
+
+    @media (max-width: 1200px) {
+      margin-top: 80px;
+    }
+  }
+
+  &__title {
+    @include section-title;
+    font-size: 30px;
+  }
+
+  &__cards {
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    @media (max-width: 900px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+.pricing-card {
+  position: relative;
+  width: 33%;
+  padding: 28px 30px 40px;
+  transition: $card-transition;
+  overflow: hidden;
+
+  @media (max-width: 900px) {
+    box-sizing: border-box;
+    width: 350px;
+  }
+
+  &:hover {
+    box-shadow: $card-shadow;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    background-color: $block-color;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    top: -9px;
+    right: -10px;
+    background-color: $block-color;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-family: $montserrat-bold;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  &__amount {
+    width: 165px;
+    height: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $montserrat-bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: $block-color;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  &__list {
+    margin-bottom: 40px;
+
+    li {
+      @include li-style-type;
+      font-size: 14px;
+      line-height: 36px;
+      font-family: $open-sans;
+    }
+  }
+
+  &__btn {
+    font-size: 14px;
+    line-height: 50px;
+    text-transform: uppercase;
+    border: none;
+    background-color: $block-color;
+    color: #ffffff;
+    font-family: $montserrat-reg;
+    text-align: center;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: $card-transition;
+
+    &:hover {
+      background-color: $hover-block-color;
+    }
+  }
+}

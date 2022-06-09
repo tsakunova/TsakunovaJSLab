@@ -1,13 +1,8 @@
-To install, you can use [npm](https://npmjs.org/)
 
-    $ npm install
+[**Final markup task** ](https://tsakunova.github.io/TsakunovaJSLab/markup-task/)
 
-To build project, you can use:
 
-    $ npm run build
+[**Resume Flex variant**](https://tsakunova.github.io/TsakunovaJSLab/resume-flex/)  
 
-To start dev-server, you can use:
 
-    $ npm run server
-
-The project builds into folder **dist**
+[**Resume Float variant**](https://tsakunova.github.io/TsakunovaJSLab/resume-float/)

@@ -1,0 +1,36 @@
+@import "variables";
+@import "mixins";
+@import "animation";
+@import "fonts";
+@import "header";
+@import "we-do";
+@import "benefits";
+@import "pricing";
+@import "newsletter";
+@import "footer";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $text-color;
+}
+
+.wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+
+  @media (min-width: 900px) and (max-width: 1200px) {
+    max-width: 850px;
+  }
+
+  @media (min-width: 600px) and (max-width: 899px) {
+    max-width: 550px;
+  }
+
+  @media (max-width: 599px) {
+    max-width: 320px;
+  }
+}
