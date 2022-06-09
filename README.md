@@ -6,3 +6,7 @@
 
 
 [**Resume Float variant**](https://tsakunova.github.io/TsakunovaJSLab/resume-float/)
+
+[**Network and User Data**](https://tsakunova.github.io/TsakunovaJSLab/js9-UserData/)
+
+[**Sorting Table**](https://tsakunova.github.io/TsakunovaJSLab/js7-sortingTable/)
