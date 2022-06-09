@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle, #d4d4d4 0%, #c2c2c2 54%, #8a898e 100%);
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: #484848;
+}
+body ul {
+  list-style-type: none;
+}
+body main {
+  background-color: #ddcdcd;
+  max-width: 1024px;
+  margin: 40px auto;
+  border-radius: 5px;
+  box-shadow: 1px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+@media (max-width: 1200px) {
+  body main {
+    max-width: 760px;
+  }
+}
+@media (max-width: 800px) {
+  body main {
+    margin: 40px 20px;
+  }
+}
+body main .material-icons {
+  transform: translate(0, 25%);
+  transition: all 0.5s ease-in-out;
+}
+body main .aside {
+  float: left;
+  width: 40%;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  body main .aside {
+    width: 100%;
+    float: none;
+  }
+}
+body main .aside .aside_name-block {
+  background: #f4f4f4;
+  text-transform: uppercase;
+  padding: 40px;
+}
+@media (max-width: 800px) {
+  body main .aside .aside_name-block {
+    padding: 40px 0;
+  }
+}
+body main .aside .aside_name-block .name-block_photo {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+@media (max-width: 840px) {
+  body main .aside .aside_name-block .name-block_photo {
+    width: 120px;
+    height: 120px;
+  }
+}
+body main .aside .aside_name-block .name-block_photo img {
+  width: 100%;
+}
+body main .aside .aside_name-block .main-title {
+  cursor: default;
+  font-weight: 400;
+  font-size: 42px;
+}
+@media (max-width: 1200px) {
+  body main .aside .aside_name-block .main-title {
+    font-size: 32px;
+  }
+}
+body main .aside .aside_name-block .main-title span {
+  display: block;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+body main .aside .aside_name-block p {
+  letter-spacing: 5px;
+}
+body main .aside .aside_info-block {
+  height: 100%;
+  background: #ddcdcd;
+}
+body main .aside .aside_info-block .info-block_section-name {
+  display: inline-block;
+  padding: 10px 50px;
+  margin: -15px 0 20px;
+  cursor: default;
+  background-color: #484848;
+  color: #f4f4f4;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 2px;
+  transition: all 0.5s ease-in-out;
+}
+body main .aside .aside_info-block .info-block_section-name:hover {
+  background-color: #747070;
+}
+body main .aside .aside_info-block .contact_list {
+  margin-bottom: 40px;
+  list-style-type: none;
+}
+body main .aside .aside_info-block .contact_list li {
+  position: relative;
+  padding: 10px 0 10px 40px;
+  text-align: left;
+  font-size: 18px;
+}
+@media (max-width: 800px) {
+  body main .aside .aside_info-block .contact_list li {
+    padding: 10px;
+    display: inline-block;
+    font-size: 16px;
+  }
+}
+body main .aside .aside_info-block .contact_list li a {
+  display: block;
+  color: #484848;
+  text-decoration: none;
+}
+body main .aside .aside_info-block .contact_list li span {
+  padding-right: 10px;
+}
+body main .aside .aside_info-block .contact_list li:hover .material-icons {
+  transform: translate(0, 25%) scale(1.1) rotate(15deg);
+}
+body main .full-info {
+  padding: 40px;
+  margin-left: 40%;
+  background: #f4f4f4;
+}
+@media (max-width: 800px) {
+  body main .full-info {
+    padding: 40px 20px;
+    margin-left: 0;
+  }
+}
+body main .full-info article {
+  margin-bottom: 40px;
+}
+body main .full-info article .article-header {
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+body main .full-info article .article-header .material-icons {
+  font-size: 36px;
+  transform: none;
+}
+body main .full-info article .article-header .header-title {
+  position: relative;
+  width: 100%;
+  margin-left: 20px;
+}
+body main .full-info article .article-header .header-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #484848;
+}
+body main .full-info article .education_list li,
+body main .full-info article .projects_list li {
+  padding: 10px 0;
+}
+body main .full-info article .education_list li .date,
+body main .full-info article .projects_list li .date {
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+body main .full-info article .education_list li a,
+body main .full-info article .projects_list li a {
+  padding-left: 20px;
+  color: #484848;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+body main .full-info article .projects_list li {
+  position: relative;
+  list-style-type: none;
+}
+body main .full-info article .projects_list li::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  top: 12px;
+  left: 0;
+  background: url(assets/task_alt.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=main.css.map */
