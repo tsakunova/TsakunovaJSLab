@@ -1,12 +1,8 @@
-# TsakunovaJSLab
-
-Task: Resume
+[**Final markup task** ](https://tsakunova.github.io/TsakunovaJSLab/markup-task/)
 
 
-DEADLINE: 28th of March
+[**Resume Flex variant**](https://tsakunova.github.io/TsakunovaJSLab/resume-flex/)  
 
 
-[**Deploy Flex variant**](https://tsakunova.github.io/TsakunovaJSLab/resume-flex/)  
+[**Resume Float variant**](https://tsakunova.github.io/TsakunovaJSLab/resume-float/)
 
-
-[**Deploy Float variant**](https://tsakunova.github.io/TsakunovaJSLab/resume-float/)

@@ -1,0 +1,142 @@
+.header {
+  position: relative;
+  height: 500px;
+
+  cursor: default;
+  color: $text-color;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-color: rgba(96, 96, 110, 1);
+    background-image: url(../assets/img/header/bg.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    width: 100%;
+    filter: grayscale(1);
+    opacity: 0.7;
+    z-index: -1
+  }
+
+  &__wrapper {
+    font-family: $montserrat-bold;
+    text-transform: uppercase;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+  }
+
+  &__logo {
+    font-size: 18px;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
+
+  &__menu {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+  }
+
+  &__burger-menu {
+    width: 32px;
+    height: 1px;
+    background-color: $text-color;
+    top: 3px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 15px;
+      height: 1px;
+      background-color: $text-color;
+      top: 7px;
+      left: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 23px;
+      height: 1px;
+      background-color: $text-color;
+      top: 14px;
+      left: 0;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    padding-top: 185px;
+    padding-bottom: 18px;
+    font-size: 36px;
+    background: $header-gradient;
+    background-size: 200% 100px;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient;
+    animation-delay: 0;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    transition: font-size 500ms ease-in-out;
+  }
+
+  &__breadcrumbs {
+    .breadcrumbs__list {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      gap: 15px;
+
+      .breadcrumbs__item {
+        position: relative;
+
+        a {
+          text-align: center;
+          font-size: 14px;
+          color: $text-color;
+          text-decoration: none;
+          pointer-events: none;
+          transition: $card-transition;
+        }
+
+        &:first-child::after {
+          content: '/';
+          position: absolute;
+          top: 0;
+          right: -10px;
+        }
+
+        &:not(&_active) {
+          a {
+            color: $text-unactive;
+            pointer-events: initial;
+
+            &:hover {
+              color: $text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .nav-list_none {
+    display: none;
+  }
+}

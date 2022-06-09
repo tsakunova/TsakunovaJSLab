@@ -1,0 +1,133 @@
+.newsletter {
+  background-color: $block-color;
+  padding: 37px 0 50px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__left-column {
+    color: #FFFFFF;
+
+    @media (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .newsletter__title {
+      font-size: 30px;
+      line-height: 48px;
+      letter-spacing: -0.7px;
+      text-transform: uppercase;
+      font-family: $montserrat-bold;
+      margin-bottom: 17px;
+
+      @media (max-width: 900px) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__btn {
+    font-size: 14px;
+    line-height: 48px;
+    text-transform: uppercase;
+    border: none;
+    background-color: #ffffff;
+    color: $block-color;
+    font-family: $montserrat-bold;
+    text-align: center;
+    padding: 0 30px;
+    cursor: pointer;
+    transition: $card-transition;
+
+    &:hover {
+      background-color: $text-color;
+    }
+
+    @media (max-width: 1200px) {
+      margin: 0 auto;
+    }
+  }
+
+  &__right-column {
+    max-width: 504px;
+    background-color: #ffffff;
+    padding: 10px 25px;
+    margin-top: 12px;
+
+    .newsletter__subtitle {
+      font-size: 24px;
+      line-height: 38px;
+      letter-spacing: -0.7px;
+      text-transform: uppercase;
+      font-family: $montserrat-bold;
+
+      @media (max-width: 900px) {
+        text-align: center;
+      }
+    }
+
+    p {
+      font-family: $open-sans;
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    form {
+      margin-top: 25px;
+      margin-bottom: 7px;
+
+      @media (max-width: 900px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__email {
+    width: 374px;
+    height: 52px;
+    margin-left: -5px;
+    padding-left: 20px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: none;
+    font-family: $montserrat-reg;
+    box-sizing: border-box;
+
+    &::placeholder {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #CDCDCD;
+    }
+
+    @media (max-width: 900px) {
+      width: 70%;
+    }
+  }
+
+  &__send-btn {
+    font-size: 14px;
+    line-height: 49px;
+    text-transform: uppercase;
+    border: 1.5px solid $block-color;
+    background-color: $block-color;
+    color: #ffffff;
+    font-family: $montserrat-bold;
+    text-align: center;
+    padding: 0 45px;
+    cursor: pointer;
+    transition: $card-transition;
+
+    &:hover {
+      background-color: $hover-block-color;
+    }
+  }
+}
