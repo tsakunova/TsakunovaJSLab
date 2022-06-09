@@ -1,0 +1,18 @@
+<h1>Angular Task</h1>
+<p>{{ paragraph }}</p>
+<ol>
+  <li>Install @angular/cli</li>
+  <li>Generate Application by cli</li>
+  <li>
+    <app-test></app-test>
+  </li>
+  <li>Generate Service</li>
+  <li>Run Build</li>
+  <li>Run Start</li>
+  <li>Run tests</li>
+</ol>
+<h3>Global service</h3>
+<button (click)="counterService.counterDown()">-</button>
+<span class="counter">{{counterService.counter}}</span>
+<button (click)="counterService.counterUp()">+</button>
+
